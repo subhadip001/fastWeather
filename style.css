@@ -153,6 +153,50 @@ button:hover{
     display: flex;
 }
 
+/*loading animation style starts here */
+
+
+
+.loading{
+    display: none;
+    height: 40px;
+    width: 40px;
+    /* background-color: blueviolet; */
+    position: absolute;
+    left: 48%;;
+    top: 48%;
+    border-radius: 50%;
+    /* box-shadow: 0 0 0 10px gray ; */
+    animation: spin linear 1.2s infinite;
+}
+.loading-shown{
+    display: block;
+}
+
+.loading::after{
+    content : "";
+    display : block;
+    height : 20px;
+    width : 20px;
+    border-radius : 50%;
+    box-shadow : 40px  10px 0 aqua , 
+                 10px 40px 0 grey ,
+                 -20px 10px 0 aqua ,
+                 10px  -20px 0 grey
+
+
+}
+
+@keyframes spin {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+
 
 /* media-queries starts from here */
 
