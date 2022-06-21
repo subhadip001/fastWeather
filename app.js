@@ -14,6 +14,16 @@ const upDown = document.querySelector("#updown")
 const Down = document.querySelector("#updown #down")
 const Up = document.querySelector("#updown  #up")
 const weatherDetails = document.querySelector("#collapsed-det")
+const spinner = document.querySelector(".loading")
+
+
+const showSpinner = () => {
+    spinner.classList.add("loading-shown")
+}
+const hideSpinner = () => {
+    spinner.classList.remove("loading-shown")
+}
+
 
 const date = new Date()
 console.log(date.getDay())
@@ -53,6 +63,7 @@ const btn = document.querySelector("button")
 
 form.addEventListener("submit" , async (e) => {
     e.preventDefault();
+    showSpinner()
     console.log(form.elements.cityName.value)
     const city = form.elements.cityName.value
     const key = "a35d4300d8490d8af0872e49d8798180"
@@ -75,6 +86,7 @@ form.addEventListener("submit" , async (e) => {
             alert("Please enter a valid location")
         }
     }
+    hideSpinner()
     form.elements.cityName.value = ""
 })
 
