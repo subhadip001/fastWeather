@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/39a0385b22.js" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Fast Weather</title>
+</head>
+<body>
+    <header><h1>Get Instant Weather Information</h1></header>
+    <div class="container">
+        <div class="name"><img src="https://www.freeiconspng.com/uploads/weather-icon-png-8.png" alt="ico"><h2 class="toggle1">FastWeather</h2><h2 class="toggle2">FW</h2>
+        </div>
+        
+        <form id = "form">
+            <input type="text" placeholder="Enter City or Area name" name = "cityName">
+            <button type="submit">Search</button>
+        </form>
+       
+    </div> 
+    <div class="loading" >
+        
+    </div>
+    <div id="display" class="none">
+
+        <div id="location">
+          <h2></h2>
+          <i class="fa-solid fa-location-dot"></i>
+        </div>
+
+        <div class="main-weather">
+
+            <div id="temp">
+                <h1></h1>
+                <h4></h4>
+            </div>
+
+            <div id="desc">
+                <h3></h3>
+                <img src="" alt="">
+            </div>
+        </div>
+        
+        <h2 id="updown">Weather details 
+            <i class="fa-solid fa-caret-down" id="down"></i> 
+        </h2>
+        <div class="weather-det" id="collapsed-det">
+            
+            <div class="left">
+                <div class="box" id="box1">
+                    <h3></h3>
+                    <p>Apparent temparature</p>
+                </div>
+                <div class="box" id="box2">
+                    <h3></h3>
+                    <p>Air pressure</p>
+                </div>
+                <div class="box" id="box3">
+                    <h3></h3>
+                    <p>Humidity</p>
+                </div>
+            </div>
+            <div class="right">
+                <div class="box" id="box1">
+                    <h3></h3>
+                    <p>Visibility</p>
+                </div>
+                <div class="box" id="box2">
+                    <h3></h3>
+                    <p>Wind gust</p>
+                </div>
+                <div class="box" id="box3">
+                    <h3></h3>
+                    <p>Wind speed</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://kit.fontawesome.com/39a0385b22.js" crossorigin="anonymous"></script>
+    <script src="app.js"></script>   
+</body>
+</html>
